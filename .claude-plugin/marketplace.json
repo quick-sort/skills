@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "skills",
+  "description": "A curated marketplace of Claude Code skills and plugins for enhanced development workflows",
+  "owner": {
+    "name": "quick-sort",
+    "email": "quick-sort@outlook.com"
+  },
+  "plugins": [
+    {
+      "name": "example-skill",
+      "description": "Example skill demonstrating the Claude Code marketplace plugin structure",
+      "version": "1.0.0",
+      "author": {
+        "name": "quick-sort",
+        "email": ""
+      },
+      "source": "./plugins/example-skill",
+      "category": "example"
+    }
+  ]
+}
