@@ -14,11 +14,17 @@ Or browse available skills using `/plugin > Discover`.
 
 ## Structure
 
-- **`plugins/`** - Individual skill and plugin packages
+- **`plugins/`** - Individual skill and plugin packages (marketplace-registered)
+- **`skills/`** - Standalone skills (installed locally, not published to marketplace)
 
 ## Available Skills
 
-No skills available yet. Browse the marketplace to discover and add skills.
+| Skill | Category | Description |
+|-------|----------|-------------|
+| [example-skill](plugins/example-skill/) | example | Example skill demonstrating the Claude Code marketplace plugin structure |
+| [fireworks-tech-graph](skills/fireworks-tech-graph/) | developer-tools | Generate production-quality SVG technical diagrams (architecture, data flow, UML, network topology) exported as SVG+PNG |
+| [architecture-diagram](skills/architecture-diagram/) | diagrams | Create professional dark-themed architecture diagrams as standalone HTML files with inline SVG |
+| [odoo-19](skills/odoo-19/) | erp-crm | Odoo 19 development knowledge base with 18 specialized guides covering the full module development lifecycle |
 
 ## Contributing
 
@@ -43,6 +49,18 @@ plugins/
     │   └── my-skill/
     │       └── SKILL.md     # Skill content
     └── README.md            # Documentation
+```
+
+### Standalone Skills
+
+Standalone skills live under `skills/` and are installed locally. They should include a `SKILL.md` with YAML frontmatter:
+
+```yaml
+---
+name: my-skill
+description: >-
+  Multi-line description with trigger keywords that activate the skill.
+---
 ```
 
 ## Documentation

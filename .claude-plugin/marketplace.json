@@ -17,6 +17,39 @@
       },
       "source": "./plugins/example-skill",
       "category": "example"
+    },
+    {
+      "name": "fireworks-tech-graph",
+      "description": "Generate production-quality SVG technical diagrams (architecture, data flow, flowchart, sequence, agent/memory, ER, UML, network topology) exported as SVG+PNG. Supports 7 visual styles. Trigger: '画图' '架构图' '流程图' 'generate diagram' 'draw diagram' 'visualize'.",
+      "version": "1.0.4",
+      "author": {
+        "name": "Cocoon AI",
+        "email": "hello@cocoon-ai.com"
+      },
+      "source": "./skills/fireworks-tech-graph",
+      "category": "developer-tools"
+    },
+    {
+      "name": "architecture-diagram",
+      "description": "Create professional, dark-themed architecture diagrams as standalone HTML files with inline SVG graphics. Use when asking for system architecture, infrastructure, cloud, security, or network topology diagrams.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Cocoon AI",
+        "email": "hello@cocoon-ai.com"
+      },
+      "source": "./skills/architecture-diagram",
+      "category": "diagrams"
+    },
+    {
+      "name": "odoo-19",
+      "description": "Odoo 19 development knowledge base with 18 specialized guides covering Actions, Controllers, Data files, API Decorators, SQL Constraints, Field types, Manifest, Mixins, ORM, Migration, OWL, Performance, QWeb Reports, Security/ACL, Testing, Transactions, Translations, and XML Views.",
+      "version": "1.0.0",
+      "author": {
+        "name": "quick-sort",
+        "email": "quick-sort@outlook.com"
+      },
+      "source": "./skills/odoo-19",
+      "category": "erp-crm"
     }
   ]
 }
