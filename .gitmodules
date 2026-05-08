@@ -1,3 +1,15 @@
 [submodule "skills/fireworks-tech-graph"]
 	path = skills/fireworks-tech-graph
 	url = https://github.com/yizhiyanhua-ai/fireworks-tech-graph.git
+[submodule "plugins/n8n-skills"]
+	path = plugins/n8n-skills
+	url = https://github.com/czlonkowski/n8n-skills
+[submodule "plugins/minimax-skills"]
+	path = plugins/minimax-skills
+	url = https://github.com/MiniMax-AI/skills
+[submodule "plugins/anthropic-skills"]
+	path = plugins/anthropic-skills
+	url = https://github.com/anthropics/skills.git
+[submodule "plugins/claude-code"]
+	path = plugins/claude-code
+	url = https://github.com/anthropics/claude-code.git

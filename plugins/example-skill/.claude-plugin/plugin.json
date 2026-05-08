@@ -1,9 +1,0 @@
-{
-  "name": "example-skill",
-  "version": "1.0.0",
-  "description": "Example skill demonstrating the Claude Code marketplace plugin structure",
-  "author": {
-    "name": "quick-sort",
-    "email": ""
-  }
-}
