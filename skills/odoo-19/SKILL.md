@@ -1,7 +1,7 @@
 ---
 name: odoo-19
 description: >-
-  Odoo 19 development knowledge base with 18 specialized guides covering
+  Odoo 19 development knowledge base with 19 specialized guides covering
   Actions (ir.actions.*, cron jobs, server actions), Controllers (HTTP
   routing, endpoints, auth types), Data files (XML/CSV records, shortcuts,
   noupdate), API Decorators (@api.depends, @api.constrains, @api.ondelete,
@@ -19,10 +19,14 @@ description: >-
   (TransactionCase, HttpCase, mocking, query count assertions), Transactions
   (savepoints, UniqueViolation, serialization failures), Translations (i18n,
   PO files, translatable fields), XML Views (list/form/search, kanban card
-  templates, xpath inheritance, QWeb templates). Use when writing, reviewing,
+  templates, xpath inheritance, QWeb templates), Odoo 18→19 Migration
+  (deprecated APIs name_get/_cr/_context/@api.returns, removed field attributes
+  column_format/deprecated, reserved field name 'default', search view XML
+  breaking changes, t-esc→t-out, product_uom→product_uom_id, res.groups
+  privilege_id, Command.link Many2many syntax). Use when writing, reviewing,
   or debugging any Odoo 19 Python or XML code, creating or modifying modules,
-  fixing performance issues, or looking up Odoo 19 API patterns and best
-  practices.
+  fixing performance issues, migrating from Odoo 18, or looking up Odoo 19 API
+  patterns and best practices.
 ---
 
 # Odoo 19 Skill - Master Index
@@ -33,6 +37,7 @@ Master index for all Odoo 19 development guides. Read the appropriate guide from
 
 | Topic          | File                                      | When to Use                                             |
 | -------------- | ----------------------------------------- | ------------------------------------------------------- |
+| 18→19 Migration | `references/odoo-18-19-migrations.md`    | Migrating Odoo 18 modules to 19, deprecated APIs, breaking changes |
 | Actions        | `references/odoo-19-actions-guide.md`     | Creating actions, menus, scheduled jobs, server actions |
 | API Decorators | `references/odoo-19-decorator-guide.md`   | Using @api decorators, compute fields, validation       |
 | Controllers    | `references/odoo-19-controller-guide.md`  | Writing HTTP endpoints, routes, web controllers         |
@@ -58,6 +63,7 @@ Master index for all Odoo 19 development guides. Read the appropriate guide from
 skills/odoo-19.0/
 ├── SKILL.md                          # This file - master index
 └── references/                       # Development guides
+    ├── odoo-18-19-migrations.md
     ├── odoo-19-actions-guide.md
     ├── odoo-19-controller-guide.md
     ├── odoo-19-data-guide.md
