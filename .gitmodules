@@ -13,3 +13,6 @@
 [submodule "plugins/claude-code"]
 	path = plugins/claude-code
 	url = https://github.com/anthropics/claude-code.git
+[submodule "skills/handraw-style"]
+	path = skills/handraw-style
+	url = https://github.com/yang0/handraw-style.git
