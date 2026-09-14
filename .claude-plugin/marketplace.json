@@ -19,6 +19,23 @@
       "category": "developer-tools"
     },
     {
+      "name": "handdraw-style-prompter",
+      "description": "Turn a 001-261 hand-drawn style number plus an image theme into bilingual (Chinese/English) image prompts, or generate the image with a model-capability-aware decision about passing the numbered reference image. Trigger: 'handdraw style' '手绘风格' '编号风格' 'style number prompt'.",
+      "version": "1.0.0",
+      "author": {
+        "name": "yang0",
+        "email": "yang0@126.com"
+      },
+      "source": "./skills/handraw-style",
+      "strict": false,
+      "skills": [
+        "./skills/handraw-style/handdraw-style-prompter"
+      ],
+      "category": "creative",
+      "repository": "https://github.com/yang0/handraw-style",
+      "license": "MIT"
+    },
+    {
       "name": "architecture-diagram",
       "description": "Create professional, dark-themed architecture diagrams as standalone HTML files with inline SVG graphics. Use when asking for system architecture, infrastructure, cloud, security, or network topology diagrams.",
       "version": "1.0.0",
