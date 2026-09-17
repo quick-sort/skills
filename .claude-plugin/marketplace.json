@@ -20,17 +20,13 @@
     },
     {
       "name": "handdraw-style-prompter",
-      "description": "Turn a 001-261 hand-drawn style number plus an image theme into bilingual (Chinese/English) image prompts, or generate the image with a model-capability-aware decision about passing the numbered reference image. Trigger: 'handdraw style' '手绘风格' '编号风格' 'style number prompt'.",
+      "description": "Turn a 001-263 hand-drawn style number plus an image theme into bilingual (Chinese/English) image prompts, or generate the image with a model-capability-aware decision about passing the numbered reference image. Skill-only package (97MB style reference image library stays upstream at yang0/handraw-style). Trigger: 'handdraw style' '手绘风格' '编号风格' 'style number prompt'.",
       "version": "1.0.0",
       "author": {
         "name": "yang0",
         "email": "yang0@126.com"
       },
-      "source": "./skills/handraw-style",
-      "strict": false,
-      "skills": [
-        "./skills/handraw-style/handdraw-style-prompter"
-      ],
+      "source": "./skills/handdraw-style-prompter",
       "category": "creative",
       "repository": "https://github.com/yang0/handraw-style",
       "license": "MIT"

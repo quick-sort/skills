@@ -60,6 +60,17 @@
       ]
     },
     {
+      "repo": "https://github.com/yang0/handraw-style.git",
+      "branch": "master",
+      "sha": "2bfc34c9b7fe78edfd730ab1920725e6badd56d5",
+      "dirs": [
+        { "subdir": "handdraw-style-prompter", "dest": "skills/handdraw-style-prompter" },
+        { "subdir": "LICENSE", "dest": "skills/handdraw-style-prompter/LICENSE" },
+        { "subdir": "README.md", "dest": "skills/handdraw-style-prompter/README.md" },
+        { "subdir": "MANIFEST.md", "dest": "skills/handdraw-style-prompter/MANIFEST.md" }
+      ]
+    },
+    {
       "repo": "https://github.com/czlonkowski/n8n-skills.git",
       "branch": "main",
       "sha": "19cd793f4789e3ef9c657ccf26e097f641a77df0",

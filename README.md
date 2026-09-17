@@ -33,6 +33,11 @@ Vendored content is re-syncable from upstream via `scripts/sync.py`:
 | 13 official plugins (`plugin-dev`, `code-review`, `feature-dev`, `hookify`, …) | [anthropics/claude-code](https://github.com/anthropics/claude-code) `plugins/` |
 | 17 MiniMax skills (`frontend-dev`, `shader-dev`, `gif-sticker-maker`, …) + `plugins/pptx-plugin` | [MiniMax-AI/skills](https://github.com/MiniMax-AI/skills) |
 | `plugins/n8n-mcp-skills` (15 skills + hooks layer) | [czlonkowski/n8n-skills](https://github.com/czlonkowski/n8n-skills) |
+| `skills/handdraw-style-prompter` (skill only) | [yang0/handraw-style](https://github.com/yang0/handraw-style) — the 97MB style reference image library stays upstream |
+
+**No Git LFS and no submodules in this repo** — Claude Code's marketplace clone
+downloads neither LFS content nor submodules, so binary assets (fonts, PDFs,
+images) must be committed as regular blobs.
 
 Locally maintained (never synced): `architecture-diagram`, `odoo-19`, `find-skills`,
 the hand-written `plugin.json` manifests for `plugin-dev` and `n8n-mcp-skills`.

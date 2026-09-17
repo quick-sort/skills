@@ -26,6 +26,7 @@ UPSTREAM_JSON = SCRIPT_DIR / "upstream.json"
 SPARSE = {
     "anthropics/claude-code": ["plugins"],
     "anthropics/skills": ["skills"],
+    "yang0/handraw-style": ["handdraw-style-prompter", "LICENSE", "README.md", "MANIFEST.md"],
 }
 
 
@@ -53,7 +54,7 @@ def main():
             if sparse_dirs:
                 run(["git", "clone", "-q", "--depth", "1", "--filter=blob:none",
                      "--sparse", "--branch", branch, repo, str(clone)])
-                run(["git", "-C", str(clone), "sparse-checkout", "set"] + sparse_dirs)
+                run(["git", "-C", str(clone), "sparse-checkout", "set", "--skip-checks"] + sparse_dirs)
             else:
                 run(["git", "clone", "-q", "--depth", "1", "--branch", branch, repo, str(clone)])
 
