@@ -1,0 +1,90 @@
+{
+  "README": "Upstream mapping for vendored content. sync.sh reads this file to re-sync each vendored directory from its upstream repository. 'dest' paths are relative to repo root. 'subdir' is the path within the upstream repo to copy. 'rename' maps subdir basename to dest basename.",
+  "sources": [
+    {
+      "repo": "https://github.com/yizhiyanhua-ai/fireworks-tech-graph.git",
+      "branch": "main",
+      "sha": "31fea364eda5f1852b1175f3d9e29ea31d22dcb4",
+      "dirs": [
+        {
+          "subdir": ".",
+          "dest": "skills/fireworks-tech-graph"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/anthropics/skills.git",
+      "branch": "main",
+      "sha": "34040c9c568585f6929bedeaad110ad08f079624",
+      "dirs": [
+        {
+          "subdir": "skills",
+          "dest": "skills",
+          "include": "*",
+          "exclude": [
+            "frontend-design"
+          ],
+          "renames": {
+            "frontend-design": "frontend-design-skill"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/anthropics/claude-code.git",
+      "branch": "main",
+      "sha": "68ac8bbf0245b615b41517bf8f2b2f35af1ae31d",
+      "dirs": [
+        {
+          "subdir": "plugins",
+          "dest": "plugins",
+          "exclude": [
+            "README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/MiniMax-AI/skills.git",
+      "branch": "main",
+      "sha": "60aaae52bb2af8162732751a4332f62a5fef518b",
+      "dirs": [
+        {
+          "subdir": "skills",
+          "dest": "skills"
+        },
+        {
+          "subdir": "plugins/pptx-plugin",
+          "dest": "plugins/pptx-plugin"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/czlonkowski/n8n-skills.git",
+      "branch": "main",
+      "sha": "19cd793f4789e3ef9c657ccf26e097f641a77df0",
+      "dirs": [
+        {
+          "subdir": "skills",
+          "dest": "plugins/n8n-mcp-skills/skills"
+        },
+        {
+          "subdir": "hooks",
+          "dest": "plugins/n8n-mcp-skills/hooks"
+        },
+        {
+          "subdir": "README.md",
+          "dest": "plugins/n8n-mcp-skills/README.md"
+        },
+        {
+          "subdir": "LICENSE",
+          "dest": "plugins/n8n-mcp-skills/LICENSE"
+        },
+        {
+          "subdir": ".claude-plugin/plugin.json",
+          "dest": "plugins/n8n-mcp-skills/.claude-plugin/plugin.json"
+        }
+      ]
+    }
+  ]
+}

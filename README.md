@@ -1,67 +1,59 @@
 # Claude Code Skills Marketplace
 
-A curated directory of high-quality skills and plugins for Claude Code.
+A curated marketplace of Claude Code skills and plugins — fully self-contained, no git submodules.
 
 ## Installation
 
-Install skills directly from this marketplace:
+Install any entry directly from this marketplace:
 
 ```
-/plugin install {skill-name}@{owner}/skills
+/plugin install {name}@quick-sort/skills
 ```
 
-Or browse available skills using `/plugin > Discover`.
+Or browse available entries using `/plugin > Discover`.
 
 ## Structure
 
-- **`plugins/`** - Individual skill and plugin packages (marketplace-registered)
-- **`skills/`** - Standalone skills (installed locally, not published to marketplace)
+- **`skills/`** — Standalone skill packages (one skill per entry, `SKILL.md` at root)
+- **`plugins/`** — Full plugin packages (multi-component: skills + agents + commands + hooks)
+- **`scripts/`** — Upstream sync tooling (`sync.py` + `upstream.json`)
 
-## Available Skills
+All content is vendored directly into this repository. Former git submodules have been
+flattened so that a plain `git clone` (which is what Claude Code does when adding a
+marketplace) gets every entry's files.
 
-| Skill | Category | Description |
-|-------|----------|-------------|
-| [example-skill](plugins/example-skill/) | example | Example skill demonstrating the Claude Code marketplace plugin structure |
-| [fireworks-tech-graph](skills/fireworks-tech-graph/) | developer-tools | Generate production-quality SVG technical diagrams (architecture, data flow, UML, network topology) exported as SVG+PNG |
-| [architecture-diagram](skills/architecture-diagram/) | diagrams | Create professional dark-themed architecture diagrams as standalone HTML files with inline SVG |
-| [odoo-19](skills/odoo-19/) | erp-crm | Odoo 19 development knowledge base with 18 specialized guides covering the full module development lifecycle |
+## Upstream Sources
+
+Vendored content is re-syncable from upstream via `scripts/sync.py`:
+
+| Vendored | Upstream |
+|----------|----------|
+| `skills/fireworks-tech-graph` | [yizhiyanhua-ai/fireworks-tech-graph](https://github.com/yizhiyanhua-ai/fireworks-tech-graph) |
+| 20 Anthropic skills (`docx`, `pdf`, `pptx`, `xlsx`, `mcp-builder`, `skill-creator`, …) | [anthropics/skills](https://github.com/anthropics/skills) |
+| 13 official plugins (`plugin-dev`, `code-review`, `feature-dev`, `hookify`, …) | [anthropics/claude-code](https://github.com/anthropics/claude-code) `plugins/` |
+| 17 MiniMax skills (`frontend-dev`, `shader-dev`, `gif-sticker-maker`, …) + `plugins/pptx-plugin` | [MiniMax-AI/skills](https://github.com/MiniMax-AI/skills) |
+| `plugins/n8n-mcp-skills` (15 skills + hooks layer) | [czlonkowski/n8n-skills](https://github.com/czlonkowski/n8n-skills) |
+
+Locally maintained (never synced): `architecture-diagram`, `odoo-19`, `find-skills`,
+the hand-written `plugin.json` manifests for `plugin-dev` and `n8n-mcp-skills`.
+
+### Syncing from upstream
+
+```bash
+scripts/sync.py --check    # report which upstreams have new commits
+scripts/sync.py            # sync everything to latest upstream heads
+scripts/sync.py minimax    # sync sources whose repo URL matches "minimax"
+```
+
+Sync updates `scripts/upstream.json` with the new SHAs. After syncing, review the diff
+and update `.claude-plugin/marketplace.json` if versions/descriptions changed.
 
 ## Contributing
 
-### Submitting a Skill
-
 1. Fork this repository
-2. Add your skill under `plugins/{skill-name}/`
-3. Include a `.claude-plugin/plugin.json` with metadata
-4. Add your skill to `marketplace.json`
-5. Submit a pull request
-
-### Skill Structure
-
-Each skill should follow this structure:
-
-```
-plugins/
-└── my-skill/
-    ├── .claude-plugin/
-    │   └── plugin.json      # Skill metadata
-    ├── skills/
-    │   └── my-skill/
-    │       └── SKILL.md     # Skill content
-    └── README.md            # Documentation
-```
-
-### Standalone Skills
-
-Standalone skills live under `skills/` and are installed locally. They should include a `SKILL.md` with YAML frontmatter:
-
-```yaml
----
-name: my-skill
-description: >-
-  Multi-line description with trigger keywords that activate the skill.
----
-```
+2. Add your skill under `skills/{skill-name}/` with a `SKILL.md`, or a full plugin under `plugins/{name}/` with `.claude-plugin/plugin.json`
+3. Register it in `.claude-plugin/marketplace.json` (one entry per installable item)
+4. Submit a pull request
 
 ## Documentation
 

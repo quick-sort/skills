@@ -9,8 +9,8 @@
   "plugins": [
     {
       "name": "fireworks-tech-graph",
-      "description": "Generate production-quality SVG technical diagrams (architecture, data flow, flowchart, sequence, agent/memory, ER, UML, network topology) exported as SVG+PNG. Supports 7 visual styles. Trigger: '画图' '架构图' '流程图' 'generate diagram' 'draw diagram' 'visualize'.",
-      "version": "1.0.4",
+      "description": "Create precise SVG technical diagrams (architecture, UML, agent, cloud, workflow), export PNG or offline HTML, and animate supported semantic SVGs to GIF. Trigger: '画图' '架构图' '流程图' 'generate diagram' 'draw diagram' 'visualize'.",
+      "version": "1.2.0",
       "author": {
         "name": "Cocoon AI",
         "email": "hello@cocoon-ai.com"
@@ -48,7 +48,7 @@
     },
     {
       "name": "odoo-19",
-      "description": "Odoo 19 development knowledge base with 18 specialized guides covering Actions, Controllers, Data files, API Decorators, SQL Constraints, Field types, Manifest, Mixins, ORM, Migration, OWL, Performance, QWeb Reports, Security/ACL, Testing, Transactions, Translations, and XML Views.",
+      "description": "Odoo 19 development knowledge base with 19 specialized guides covering Actions, Controllers, Data files, API Decorators, SQL Constraints, Field types, Manifest, Mixins, ORM, Migration, OWL, Performance, QWeb Reports, Security/ACL, Testing, Transactions, Translations, and XML Views.",
       "version": "1.0.0",
       "author": {
         "name": "quick-sort",
@@ -58,14 +58,479 @@
       "category": "erp-crm"
     },
     {
+      "name": "find-skills",
+      "description": "Helps users discover and install agent skills when they ask questions like 'how do I do X', 'find a skill for X', 'is there a skill that can...', or express interest in extending capabilities.",
+      "source": "./skills/find-skills",
+      "category": "productivity"
+    },
+    {
+      "name": "academy-guide",
+      "description": "Recommends matching courses, tutorials, and use cases from Claude Academy (academy.claude.com), Anthropic's learning hub, when answering questions about how to use Claude or a Claude product.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/academy-guide",
+      "category": "learning"
+    },
+    {
+      "name": "algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use when users request generative art, algorithmic art, flow fields, or particle systems.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/algorithmic-art",
+      "category": "creative"
+    },
+    {
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any artifact that may benefit from Anthropic's look-and-feel. Use when brand colors, style guidelines, or company design standards apply.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/brand-guidelines",
+      "category": "creative"
+    },
+    {
+      "name": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy and bundled fonts. Use when the user asks to create a poster, piece of art, design, or other static visual piece.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/canvas-design",
+      "category": "creative"
+    },
+    {
+      "name": "claude-api",
+      "description": "Claude API / Anthropic SDK reference: model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, and model migration. Read before writing or debugging any Claude/Anthropic LLM code.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/claude-api",
+      "category": "development"
+    },
+    {
+      "name": "discernment-nudge",
+      "description": "After giving a substantive answer or draft the user may act on, this skill prompts a confidence check and verification of assumptions — surfacing uncertainty before the user relies on the output.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/discernment-nudge",
+      "category": "productivity"
+    },
+    {
+      "name": "doc-coauthoring",
+      "description": "Guide users through a structured workflow for co-authoring documentation, proposals, technical specs, and decision docs — efficiently transferring context and refining content through iteration.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/doc-coauthoring",
+      "category": "productivity"
+    },
+    {
+      "name": "docx",
+      "description": "Create, read, edit, or manipulate Word documents (.docx) and Word templates (.dotx), including professional formatting, tracked changes, and mail merge.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/docx",
+      "category": "documents"
+    },
+    {
+      "name": "frontend-design-skill",
+      "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one — aesthetic direction, typography, and choices that don't read as templated defaults. (Skill version from anthropics/skills; the fuller frontend-design plugin is listed separately.)",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/frontend-design-skill",
+      "category": "development"
+    },
+    {
+      "name": "internal-comms",
+      "description": "Resources for writing internal communications: status reports, leadership updates, company newsletters, FAQs, and announcements, in the formats companies actually use.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/internal-comms",
+      "category": "productivity"
+    },
+    {
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers in Python (FastMCP) or Node/TypeScript (MCP SDK) that let LLMs interact with external services through well-designed tools.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/mcp-builder",
+      "category": "development"
+    },
+    {
+      "name": "pdf",
+      "description": "Read, extract, combine, split, rotate, watermark, fill forms in, encrypt/decrypt, and create PDF files — full PDF manipulation toolkit.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/pdf",
+      "category": "documents"
+    },
+    {
+      "name": "pptx",
+      "description": "Create, read, and edit PowerPoint presentations (.pptx/.potx) — slide decks, pitch decks, template-based generation, and text extraction.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/pptx",
+      "category": "documents"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance with evals, benchmarking, and variance analysis.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/skill-creator",
+      "category": "development"
+    },
+    {
+      "name": "slack-gif-creator",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack, with constraints, validation tools, and animation concepts.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/slack-gif-creator",
+      "category": "creative"
+    },
+    {
+      "name": "theme-factory",
+      "description": "Toolkit for styling artifacts (slides, docs, reports, HTML landing pages) with a theme — 10 pre-set color/font themes applicable to any artifact, or generate a new theme on-the-fly.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/theme-factory",
+      "category": "creative"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate multi-component claude.ai HTML artifacts with React, Tailwind CSS, and shadcn/ui — for artifacts requiring state management, routing, or component libraries.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/web-artifacts-builder",
+      "category": "development"
+    },
+    {
+      "name": "webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright: verifying frontend functionality, debugging UI behavior, capturing screenshots, and viewing browser logs.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/webapp-testing",
+      "category": "development"
+    },
+    {
+      "name": "xlsx",
+      "description": "Open, read, edit, fix, create, and format Excel/spreadsheet files (.xlsx, .xlsm, .xltx, .csv, .tsv) — formulas, charts, pivot tables, and data cleaning.",
+      "author": {
+        "name": "Anthropic"
+      },
+      "source": "./skills/xlsx",
+      "category": "documents"
+    },
+    {
+      "name": "android-native-dev",
+      "description": "Android native application development and UI design guide: Material Design 3, Kotlin/Compose development, project configuration, accessibility, and build troubleshooting.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/android-native-dev",
+      "category": "mobile"
+    },
+    {
+      "name": "buddy-sings",
+      "description": "Makes the Claude Code pet (/buddy) sing a song — triggers on any request combining the Claude Code buddy/pet/companion concept with singing or music, in any language.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/buddy-sings",
+      "category": "creative"
+    },
+    {
+      "name": "flutter-dev",
+      "description": "Flutter cross-platform development guide: widget patterns, Riverpod/Bloc state management, GoRouter navigation, performance optimization, platform-specific implementations, and testing.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/flutter-dev",
+      "category": "mobile"
+    },
+    {
+      "name": "frontend-dev",
+      "description": "Full-stack frontend development combining premium UI design, cinematic animations, AI-generated media assets, persuasive copywriting, and visual art for complete, visually striking web pages.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/frontend-dev",
+      "category": "development"
+    },
+    {
+      "name": "fullstack-dev",
+      "description": "Full-stack backend architecture and frontend-backend integration guide: REST APIs, CRUD apps, real-time apps, Express + React, Next.js, database integration, and deployment.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/fullstack-dev",
+      "category": "development"
+    },
+    {
+      "name": "gif-sticker-maker",
+      "description": "Convert photos (people, pets, objects, logos) into animated GIF stickers with captions — cartoon stickers, emoji packs, Funko Pop / Pop Mart blind box style animations.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/gif-sticker-maker",
+      "category": "creative"
+    },
+    {
+      "name": "ios-application-dev",
+      "description": "iOS application development guide covering UIKit, SnapKit, and SwiftUI: touch targets, safe areas, navigation, Dynamic Type, Dark Mode, accessibility, and SwiftUI design guidelines.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/ios-application-dev",
+      "category": "mobile"
+    },
+    {
+      "name": "minimax-docx",
+      "description": "Professional DOCX document creation, editing, and formatting using OpenXML SDK (.NET): create from scratch, fill/edit existing documents, or apply template formatting.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/minimax-docx",
+      "category": "documents"
+    },
+    {
+      "name": "minimax-multimodal-toolkit",
+      "description": "Use mmx to generate text, images, video, speech, and music via the MiniMax AI platform from the terminal, including web search and MiniMax API resource management.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/minimax-multimodal-toolkit",
+      "category": "creative"
+    },
+    {
+      "name": "minimax-music-gen",
+      "description": "Generate music, songs, and audio tracks — music creation, song writing, lyrics generation, covers, or turning provided lyrics/moods into a song.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/minimax-music-gen",
+      "category": "creative"
+    },
+    {
+      "name": "minimax-music-playlist",
+      "description": "Generate personalized music playlists by analyzing the user's music taste and generation feedback history.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/minimax-music-playlist",
+      "category": "creative"
+    },
+    {
+      "name": "minimax-pdf",
+      "description": "Create visually polished, design-forward PDF documents — reports, proposals, resumes, client-ready documents where visual quality and design identity matter.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/minimax-pdf",
+      "category": "documents"
+    },
+    {
+      "name": "minimax-xlsx",
+      "description": "Open, create, read, analyze, edit, and validate Excel/spreadsheet files (.xlsx, .xlsm, .csv, .tsv) including financial models and pivot tables.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/minimax-xlsx",
+      "category": "documents"
+    },
+    {
+      "name": "pptx-generator",
+      "description": "Generate, edit, and read PowerPoint presentations: create from scratch with PptxGenJS, edit existing PPTX via XML workflows, or extract text with markitdown.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/pptx-generator",
+      "category": "documents"
+    },
+    {
+      "name": "react-native-dev",
+      "description": "React Native and Expo development guide: components, styling, animations, navigation, state management, networking, performance, testing, native capabilities, and CI/CD.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/react-native-dev",
+      "category": "mobile"
+    },
+    {
+      "name": "shader-dev",
+      "description": "Comprehensive GLSL shader techniques for stunning visual effects — ray marching, SDF modeling, fluid simulation, particle systems, procedural generation, lighting, and post-processing.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/shader-dev",
+      "category": "creative"
+    },
+    {
+      "name": "vision-analysis",
+      "description": "Analyze, describe, and extract information from images using the MiniMax vision MCP tool — triggers on shared image file paths/URLs or requests to look at an image.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./skills/vision-analysis",
+      "category": "creative"
+    },
+    {
+      "name": "agent-sdk-dev",
+      "description": "Development kit for working with the Claude Agent SDK: verifier agents, commands, and guidance for building SDK applications.",
+      "source": "./plugins/agent-sdk-dev",
+      "category": "development"
+    },
+    {
+      "name": "claude-opus-4-5-migration",
+      "description": "Migrate your code and prompts from Sonnet 4.x and Opus 4.1 to Opus 4.5.",
+      "author": {
+        "name": "William Hu",
+        "email": "whu@anthropic.com"
+      },
+      "source": "./plugins/claude-opus-4-5-migration",
+      "category": "development"
+    },
+    {
+      "name": "code-review",
+      "description": "Automated code review for pull requests using multiple specialized agents with confidence-based scoring to filter false positives.",
+      "author": {
+        "name": "Boris Cherny",
+        "email": "boris@anthropic.com"
+      },
+      "source": "./plugins/code-review",
+      "category": "productivity"
+    },
+    {
+      "name": "commit-commands",
+      "description": "Commands for git commit workflows including commit, push, and PR creation.",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "source": "./plugins/commit-commands",
+      "category": "productivity"
+    },
+    {
+      "name": "explanatory-output-style",
+      "description": "Adds educational insights about implementation choices and codebase patterns (mimics the deprecated Explanatory output style).",
+      "author": {
+        "name": "Dickson Tsai",
+        "email": "dickson@anthropic.com"
+      },
+      "source": "./plugins/explanatory-output-style",
+      "category": "learning"
+    },
+    {
+      "name": "feature-dev",
+      "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review.",
+      "author": {
+        "name": "Siddharth Bidasaria",
+        "email": "sbidasaria@anthropic.com"
+      },
+      "source": "./plugins/feature-dev",
+      "category": "development"
+    },
+    {
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics. (Plugin version from anthropics/claude-code.)",
+      "author": {
+        "name": "Prithvi Rajasekaran & Alexander Bricken",
+        "email": "prithvi@anthropic.com"
+      },
+      "source": "./plugins/frontend-design",
+      "category": "development"
+    },
+    {
+      "name": "hookify",
+      "description": "Easily create custom hooks to prevent unwanted behaviors by analyzing conversation patterns or from explicit instructions. Define rules via simple markdown files.",
+      "author": {
+        "name": "Daisy Hollman",
+        "email": "daisy@anthropic.com"
+      },
+      "source": "./plugins/hookify",
+      "category": "productivity"
+    },
+    {
+      "name": "learning-output-style",
+      "description": "Interactive learning mode that requests meaningful code contributions at decision points (mimics the unshipped Learning output style).",
+      "author": {
+        "name": "Boris Cherny",
+        "email": "boris@anthropic.com"
+      },
+      "source": "./plugins/learning-output-style",
+      "category": "learning"
+    },
+    {
+      "name": "plugin-dev",
+      "description": "Comprehensive toolkit for developing Claude Code plugins. Includes expert skills covering hooks, MCP integration, commands, agents, and best practices, plus AI-assisted plugin creation and validation agents.",
+      "author": {
+        "name": "Daisy Hollman",
+        "email": "daisy@anthropic.com"
+      },
+      "source": "./plugins/plugin-dev",
+      "category": "development"
+    },
+    {
+      "name": "pr-review-toolkit",
+      "description": "Comprehensive PR review agents specializing in comments, tests, error handling, type design, code quality, and code simplification.",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "source": "./plugins/pr-review-toolkit",
+      "category": "productivity"
+    },
+    {
+      "name": "ralph-wiggum",
+      "description": "Interactive self-referential AI loops for iterative development. Claude works on the same task repeatedly, seeing its previous work, until completion.",
+      "author": {
+        "name": "Daisy Hollman",
+        "email": "daisy@anthropic.com"
+      },
+      "source": "./plugins/ralph-wiggum",
+      "category": "development"
+    },
+    {
+      "name": "security-guidance",
+      "description": "Security reminder hook that warns about potential security issues when editing files, including command injection, XSS, and unsafe code patterns.",
+      "author": {
+        "name": "David Dworken",
+        "email": "dworken@anthropic.com"
+      },
+      "source": "./plugins/security-guidance",
+      "category": "security"
+    },
+    {
+      "name": "pptx-plugin",
+      "description": "PowerPoint generation and editing plugin with text-only QA (no vision required). Uses subagents for cover, TOC, content, section divider, summary slides, and template-based PPT editing workflows.",
+      "author": {
+        "name": "MiniMax AI"
+      },
+      "source": "./plugins/pptx-plugin",
+      "category": "documents"
+    },
+    {
       "name": "n8n-mcp-skills",
-      "description": "Complete bundle: 7 expert skills for building flawless n8n workflows using n8n-mcp MCP server. Includes skills for expression syntax, MCP tools usage, workflow patterns, validation, node configuration, JavaScript code, and Python code.",
-      "version": "1.9.0",
+      "description": "Complete bundle: 15 expert skills for building flawless n8n workflows using n8n-mcp MCP server, with a hooks enforcement layer. Includes skills for expression syntax, MCP tools usage, workflow patterns, validation, node configuration, JavaScript code, and Python code.",
+      "version": "1.35.0",
       "author": {
         "name": "Romuald Członkowski",
         "url": "https://www.aiadvisors.pl/en"
       },
-      "source": "./plugins/n8n-skills",
+      "source": "./plugins/n8n-mcp-skills",
       "category": "automation",
       "keywords": [
         "n8n",
@@ -82,195 +547,6 @@
       "homepage": "https://github.com/czlonkowski/n8n-skills",
       "repository": "https://github.com/czlonkowski/n8n-skills",
       "license": "MIT"
-    },
-    {
-      "name": "minimax-skills",
-      "description": "MiniMax AI skills library for frontend, fullstack, Android, iOS, shader, GIF sticker, document, presentation, spreadsheet, and multimodal media workflows",
-      "version": "1.0.0",
-      "author": {
-        "name": "MiniMax AI"
-      },
-      "source": "./plugins/minimax-skills",
-      "category": "developer-tools"
-    },
-    {
-      "name": "document-skills",
-      "description": "Collection of document processing suite including Excel, Word, PowerPoint, and PDF capabilities",
-      "source": "./plugins/anthropic-skills",
-      "strict": false,
-      "skills": [
-        "./plugins/anthropic-skills/skills/xlsx",
-        "./plugins/anthropic-skills/skills/docx",
-        "./plugins/anthropic-skills/skills/pptx",
-        "./plugins/anthropic-skills/skills/pdf"
-      ]
-    },
-    {
-      "name": "example-skills",
-      "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-      "source": "./plugins/anthropic-skills",
-      "strict": false,
-      "skills": [
-        "./plugins/anthropic-skills/skills/algorithmic-art",
-        "./plugins/anthropic-skills/skills/brand-guidelines",
-        "./plugins/anthropic-skills/skills/canvas-design",
-        "./plugins/anthropic-skills/skills/doc-coauthoring",
-        "./plugins/anthropic-skills/skills/frontend-design",
-        "./plugins/anthropic-skills/skills/internal-comms",
-        "./plugins/anthropic-skills/skills/mcp-builder",
-        "./plugins/anthropic-skills/skills/skill-creator",
-        "./plugins/anthropic-skills/skills/slack-gif-creator",
-        "./plugins/anthropic-skills/skills/theme-factory",
-        "./plugins/anthropic-skills/skills/web-artifacts-builder",
-        "./plugins/anthropic-skills/skills/webapp-testing"
-      ]
-    },
-    {
-      "name": "claude-api",
-      "description": "Claude API and SDK documentation skill for building LLM-powered applications",
-      "source": "./plugins/anthropic-skills",
-      "strict": false,
-      "skills": [
-        "./plugins/anthropic-skills/skills/claude-api"
-      ]
-    },
-    {
-      "name": "agent-sdk-dev",
-      "description": "Development kit for working with the Claude Agent SDK",
-      "source": "./plugins/claude-code/plugins/agent-sdk-dev",
-      "category": "development"
-    },
-    {
-      "name": "claude-opus-4-5-migration",
-      "description": "Migrate your code and prompts from Sonnet 4.x and Opus 4.1 to Opus 4.5.",
-      "version": "1.0.0",
-      "author": {
-        "name": "William Hu",
-        "email": "whu@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/claude-opus-4-5-migration",
-      "category": "development"
-    },
-    {
-      "name": "code-review",
-      "description": "Automated code review for pull requests using multiple specialized agents with confidence-based scoring to filter false positives",
-      "version": "1.0.0",
-      "author": {
-        "name": "Boris Cherny",
-        "email": "boris@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/code-review",
-      "category": "productivity"
-    },
-    {
-      "name": "commit-commands",
-      "description": "Commands for git commit workflows including commit, push, and PR creation",
-      "version": "1.0.0",
-      "author": {
-        "name": "Anthropic",
-        "email": "support@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/commit-commands",
-      "category": "productivity"
-    },
-    {
-      "name": "explanatory-output-style",
-      "description": "Adds educational insights about implementation choices and codebase patterns (mimics the deprecated Explanatory output style)",
-      "version": "1.0.0",
-      "author": {
-        "name": "Dickson Tsai",
-        "email": "dickson@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/explanatory-output-style",
-      "category": "learning"
-    },
-    {
-      "name": "feature-dev",
-      "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
-      "version": "1.0.0",
-      "author": {
-        "name": "Siddharth Bidasaria",
-        "email": "sbidasaria@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/feature-dev",
-      "category": "development"
-    },
-    {
-      "name": "frontend-design",
-      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Prithvi Rajasekaran & Alexander Bricken",
-        "email": "prithvi@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/frontend-design",
-      "category": "development"
-    },
-    {
-      "name": "hookify",
-      "description": "Easily create custom hooks to prevent unwanted behaviors by analyzing conversation patterns or from explicit instructions. Define rules via simple markdown files.",
-      "version": "0.1.0",
-      "author": {
-        "name": "Daisy Hollman",
-        "email": "daisy@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/hookify",
-      "category": "productivity"
-    },
-    {
-      "name": "learning-output-style",
-      "description": "Interactive learning mode that requests meaningful code contributions at decision points (mimics the unshipped Learning output style)",
-      "version": "1.0.0",
-      "author": {
-        "name": "Boris Cherny",
-        "email": "boris@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/learning-output-style",
-      "category": "learning"
-    },
-    {
-      "name": "plugin-dev",
-      "description": "Comprehensive toolkit for developing Claude Code plugins. Includes 7 expert skills covering hooks, MCP integration, commands, agents, and best practices. AI-assisted plugin creation and validation.",
-      "version": "0.1.0",
-      "author": {
-        "name": "Daisy Hollman",
-        "email": "daisy@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/plugin-dev",
-      "category": "development"
-    },
-    {
-      "name": "pr-review-toolkit",
-      "description": "Comprehensive PR review agents specializing in comments, tests, error handling, type design, code quality, and code simplification",
-      "version": "1.0.0",
-      "author": {
-        "name": "Anthropic",
-        "email": "support@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/pr-review-toolkit",
-      "category": "productivity"
-    },
-    {
-      "name": "ralph-wiggum",
-      "description": "Interactive self-referential AI loops for iterative development. Claude works on the same task repeatedly, seeing its previous work, until completion.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Daisy Hollman",
-        "email": "daisy@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/ralph-wiggum",
-      "category": "development"
-    },
-    {
-      "name": "security-guidance",
-      "description": "Security reminder hook that warns about potential security issues when editing files, including command injection, XSS, and unsafe code patterns",
-      "version": "1.0.0",
-      "author": {
-        "name": "David Dworken",
-        "email": "dworken@anthropic.com"
-      },
-      "source": "./plugins/claude-code/plugins/security-guidance",
-      "category": "security"
     }
   ]
 }
